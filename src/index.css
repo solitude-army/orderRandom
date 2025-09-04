@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-orange-50 via-warm-50 to-food-cream;
+    @apply min-h-screen;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* 卡片样式 */
+  .card {
+    @apply bg-white rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-200;
+  }
+  
+  .card-warm {
+    @apply bg-white rounded-xl shadow-warm hover:shadow-warm-lg transition-all duration-200;
+  }
+  
+  /* 按钮样式 */
+  .btn-primary {
+    @apply bg-orange-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-600 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-orange-600 border border-orange-300 px-4 py-2 rounded-lg font-medium hover:bg-orange-50 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition-colors duration-200;
+  }
+  
+  .btn-ghost {
+    @apply text-gray-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors duration-200;
+  }
+  
+  /* 输入框样式 */
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-200;
+  }
+  
+  /* 导航样式 */
+  .nav-link {
+    @apply flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200;
+  }
+  
+  .nav-link.active {
+    @apply bg-orange-100 text-orange-700 font-medium;
+  }
+  
+  /* 标签样式 */
+  .tag {
+    @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .tag-difficulty-easy {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .tag-difficulty-medium {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .tag-difficulty-hard {
+    @apply bg-red-100 text-red-800;
+  }
+  
+  /* 美食主题渐变背景 */
+  .bg-food-gradient {
+    @apply bg-gradient-food;
+  }
+  
+  .bg-warm-gradient {
+    @apply bg-gradient-warm;
+  }
+  
+  /* 文本截断 */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* 滑块样式 */
+  .slider {
+    @apply appearance-none bg-gray-200 rounded-lg cursor-pointer;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 bg-orange-500 rounded-full cursor-pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    @apply w-4 h-4 bg-orange-500 rounded-full cursor-pointer border-0;
+  }
+}
+
+@layer utilities {
+  /* 动画工具类 */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s infinite;
+  }
+  
+  /* 响应式工具类 */
+  .container-responsive {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* 美食主题色彩工具类 */
+  .text-food-primary {
+    @apply text-orange-600;
+  }
+  
+  .bg-food-primary {
+    @apply bg-orange-500;
+  }
+  
+  .border-food-primary {
+    @apply border-orange-300;
+  }
+}
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
